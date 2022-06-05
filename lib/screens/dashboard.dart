@@ -25,8 +25,8 @@ class _DashboardState extends State<Dashboard> {
     return Scaffold(
       body: _screens[_navIndex],
       bottomNavigationBar: CurvedNavigationBar(
-        color: Colors.blue.shade600,
-        buttonBackgroundColor: Colors.lightBlue.shade300,
+        color: Colors.lightBlue.shade300,
+        buttonBackgroundColor: Color(0xFF177FE4),
         backgroundColor: Colors.white,
         height: 60,
         index: _navIndex,
@@ -39,17 +39,17 @@ class _DashboardState extends State<Dashboard> {
           Icon(
             Icons.home,
             size: 30.0,
-            color: _navIndex == 0 ? Colors.blue.shade900 : Colors.white,
+            color: _navIndex == 0 ? Colors.white : Colors.black,
           ),
           Icon(
             Icons.wallet_travel_rounded,
             size: 30.0,
-            color: _navIndex == 1 ? Colors.blue.shade900 : Colors.white,
+            color: _navIndex == 1 ? Colors.white : Colors.black,
           ),
           Icon(
             Icons.account_circle_rounded,
             size: 30.0,
-            color: _navIndex == 2 ? Colors.blue.shade900 : Colors.white,
+            color: _navIndex == 2 ? Colors.white : Colors.black,
           ),
         ],
       ),
