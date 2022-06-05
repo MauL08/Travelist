@@ -11,19 +11,28 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              child: Image.asset(
-                profileData.profileImage,
-                height: 100,
-                width: 100,
+        child: Center(
+          child: Column(
+            children: [
+              Container(
+                child: Image.asset(
+                  profileData.bannerProfileImage,
+                  height: 100,
+                  width: 100,
+                ),
               ),
-            ),
-            Text(profileData.name),
-            Text(profileData.bornDate),
-            Text(profileData.age.toString()),
-          ],
+              Container(
+                child: Image.asset(
+                  profileData.profileImage,
+                  height: 100,
+                  width: 100,
+                ),
+              ),
+              Text(profileData.name),
+              Text(profileData.bornDate),
+              Text(profileData.age.toString()),
+            ],
+          ),
         ),
       ),
     );
