@@ -10,12 +10,6 @@ void main() {
       statusBarIconBrightness: Brightness.dark, // For Android (dark icons)
     ),
   );
-  SystemChrome.setEnabledSystemUIMode(
-    SystemUiMode.manual,
-    overlays: [
-      SystemUiOverlay.bottom, //This line is used for showing the bottom bar
-    ],
-  );
   runApp(const MyApp());
 }
 
