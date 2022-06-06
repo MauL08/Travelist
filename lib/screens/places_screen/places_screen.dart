@@ -7,8 +7,14 @@ class PlacesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Center(
-        child: Text('THIS IS ALL PLACES SCREEN'),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Row(
+              children: [],
+            )
+          ],
+        ),
       ),
     );
   }

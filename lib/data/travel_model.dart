@@ -50,11 +50,22 @@ const indonesiaTravelData = [
     name: 'Raja Ampat',
     about:
         'The Raja Ampat Islands are an Indonesian archipelago off the northwest tip of Bird’s Head Peninsula in West Papua. Comprising hundreds of jungle-covered islands, Raja Ampat is known for its beaches and coral reefs rich with marine life. Ancient rock paintings and caves are on Misool Island, while the crimson bird of paradise lives on Waigeo Island. Batanta and Salawati are the archipelago’s other main islands.',
-    posterImage: '',
-    bannerImage: [],
+    posterImage:
+        'assets/images/indonesia/raja_ampat/poster/rajaampatposter.jpg',
+    bannerImage: [
+      'assets/images/indonesia/raja_ampat/banner/rajaampatbanner1.jpg',
+      'assets/images/indonesia/raja_ampat/banner/rajaampatbanner2.jpg',
+      'assets/images/indonesia/raja_ampat/banner/rajaampatbanner3.jpg',
+    ],
     rating: 8.8,
     category: 'Indonesia',
-    gallery: [],
+    gallery: [
+      'assets/images/indonesia/raja_ampat/gallery/rajaampatgallery1.jpg',
+      'assets/images/indonesia/raja_ampat/gallery/rajaampatgallery2.jpg',
+      'assets/images/indonesia/raja_ampat/gallery/rajaampatgallery3.jpg',
+      'assets/images/indonesia/raja_ampat/gallery/rajaampatgallery4.jpg',
+      'assets/images/indonesia/raja_ampat/gallery/rajaampatgallery5.jpg',
+    ],
   ),
 ];
 
