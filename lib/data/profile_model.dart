@@ -1,3 +1,5 @@
+import 'package:travelist/data/travel_model.dart';
+
 class ProfileData {
   final String name;
   final String profileImage;
@@ -16,11 +18,13 @@ class ProfileData {
   });
 }
 
-const userProfileData = ProfileData(
+List<TravelData> travelData = indonesiaTravelData;
+
+var userProfileData = ProfileData(
   name: 'Akbar Maulana',
   bannerProfileImage: 'assets/images/banner.jpg',
   profileImage: 'assets/images/profile.jpg',
-  favorites: [],
+  favorites: travelData,
   bornDate: '23 Agustus 2002',
   age: 19,
 );

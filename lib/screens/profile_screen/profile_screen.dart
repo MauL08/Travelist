@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:travelist/data/profile_model.dart';
+import 'package:travelist/data/travel_model.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+  ProfileScreen({Key? key}) : super(key: key);
 
   final ProfileData profileData = userProfileData;
+  final List<TravelData> travelTest = indonesiaTravelData;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Center(
           child: Column(
             children: [
@@ -76,7 +79,7 @@ class ProfileScreen extends StatelessWidget {
                         margin: const EdgeInsets.only(bottom: 12),
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
-                          color: Colors.indigo.shade800,
+                          color: Color(0xFF177FE4),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Row(
@@ -104,7 +107,7 @@ class ProfileScreen extends StatelessWidget {
                         margin: const EdgeInsets.only(bottom: 12),
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
-                          color: Colors.indigo.shade800,
+                          color: Color(0xFF177FE4),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Row(
@@ -131,7 +134,7 @@ class ProfileScreen extends StatelessWidget {
                         width: 220,
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
-                          color: Colors.indigo.shade800,
+                          color: Color(0xFF177FE4),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Row(
@@ -175,6 +178,34 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              Container(
+                height: 250,
+                width: double.infinity,
+                margin: EdgeInsets.symmetric(horizontal: 10),
+                child: ListView.builder(
+                    physics: BouncingScrollPhysics(),
+                    shrinkWrap: true,
+                    scrollDirection: Axis.horizontal,
+                    itemCount: profileData.favorites.length,
+                    itemBuilder: (context, index) {
+                      return Container(
+                        alignment: Alignment.center,
+                        width: 300,
+                        margin:
+                            EdgeInsets.symmetric(vertical: 18, horizontal: 10),
+                        decoration: BoxDecoration(color: Colors.red),
+                        child: Column(children: [
+                          Image.asset(
+                            "${travelData[index].posterImage}",
+                            height: 180,
+                            width: 150,
+                            fit: BoxFit.contain,
+                          ),
+                          Text(profileData.favorites[index].name)
+                        ]),
+                      );
+                    }),
+              )
             ],
           ),
         ),

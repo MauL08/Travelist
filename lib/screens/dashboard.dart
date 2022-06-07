@@ -15,9 +15,9 @@ class _DashboardState extends State<Dashboard> {
   int _navIndex = 0;
 
   final List<Widget> _screens = [
-    const HomeScreen(),
-    const PlacesScreen(),
-    const ProfileScreen(),
+    HomeScreen(),
+    PlacesScreen(),
+    ProfileScreen(),
   ];
 
   @override

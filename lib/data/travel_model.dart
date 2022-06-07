@@ -18,6 +18,8 @@ class TravelData {
   });
 }
 
+var travelCategory = ['All', 'Indonesia', 'England', 'America', 'Europe'];
+
 var allTravelData = [
   indonesiaTravelData,
   englandTravelData,
