@@ -6,12 +6,12 @@ class ProfileScreen extends StatelessWidget {
   ProfileScreen({Key? key}) : super(key: key);
 
   final ProfileData profileData = userProfileData;
-  final List<TravelData> travelTest = indonesiaTravelData;
+  final List<dynamic> travelTest = allTravelData;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey.shade100,
       body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Center(
@@ -179,32 +179,89 @@ class ProfileScreen extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 250,
+                height: 280,
                 width: double.infinity,
-                margin: EdgeInsets.symmetric(horizontal: 10),
+                margin: const EdgeInsets.symmetric(horizontal: 10),
                 child: ListView.builder(
-                    physics: BouncingScrollPhysics(),
-                    shrinkWrap: true,
-                    scrollDirection: Axis.horizontal,
-                    itemCount: profileData.favorites.length,
-                    itemBuilder: (context, index) {
-                      return Container(
-                        alignment: Alignment.center,
-                        width: 300,
-                        margin:
-                            EdgeInsets.symmetric(vertical: 18, horizontal: 10),
-                        decoration: BoxDecoration(color: Colors.red),
-                        child: Column(children: [
-                          Image.asset(
-                            "${travelData[index].posterImage}",
-                            height: 180,
-                            width: 150,
-                            fit: BoxFit.contain,
+                  physics: const BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: profileData.favorites.length,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      alignment: Alignment.center,
+                      width: 300,
+                      margin: const EdgeInsets.symmetric(
+                          vertical: 18, horizontal: 10),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 150,
+                            width: 300,
+                            margin: const EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage(
+                                  profileData.favorites[index].posterImage,
+                                ),
+                              ),
+                            ),
                           ),
-                          Text(profileData.favorites[index].name)
-                        ]),
-                      );
-                    }),
+                          Container(
+                            margin: const EdgeInsets.symmetric(horizontal: 16),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      profileData.favorites[index].name,
+                                      style: const TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 14,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 8),
+                                    Row(
+                                      children: [
+                                        Icon(
+                                          Icons.star,
+                                          size: 18,
+                                          color: Colors.yellow.shade700,
+                                        ),
+                                        const SizedBox(
+                                          width: 4,
+                                        ),
+                                        Text(
+                                          profileData.favorites[index].rating
+                                              .toString(),
+                                        )
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                                ElevatedButton(
+                                  onPressed: () {},
+                                  child: const Text(
+                                    'Show',
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    );
+                  },
+                ),
               )
             ],
           ),

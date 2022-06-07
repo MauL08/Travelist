@@ -5,7 +5,7 @@ import 'package:travelist/screens/places_screen/places_screen.dart';
 import 'package:travelist/screens/profile_screen/profile_screen.dart';
 
 class Dashboard extends StatefulWidget {
-  Dashboard({Key? key}) : super(key: key);
+  const Dashboard({Key? key}) : super(key: key);
 
   @override
   State<Dashboard> createState() => _DashboardState();
@@ -13,7 +13,6 @@ class Dashboard extends StatefulWidget {
 
 class _DashboardState extends State<Dashboard> {
   int _navIndex = 0;
-
   final List<Widget> _screens = [
     HomeScreen(),
     PlacesScreen(),
@@ -27,7 +26,7 @@ class _DashboardState extends State<Dashboard> {
       bottomNavigationBar: CurvedNavigationBar(
         color: Colors.lightBlue.shade300,
         buttonBackgroundColor: Color(0xFF177FE4),
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.indigo.shade500,
         height: 60,
         index: _navIndex,
         onTap: (index) {
