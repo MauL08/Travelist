@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travelist/data/travel_category_model.dart';
 import 'package:travelist/data/travel_model.dart';
+import 'package:travelist/screens/places_detail_screen/places_detail_screen.dart';
 import 'package:travelist/widgets/userappbar_widget/userappbar_widget.dart';
 
 import '../../data/profile_model.dart';
@@ -210,7 +211,20 @@ class _PlacesScreenState extends State<PlacesScreen> {
                                             ],
                                           ),
                                           ElevatedButton(
-                                            onPressed: () {},
+                                            onPressed: () {
+                                              Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                  builder: (context) {
+                                                    return PlacesDetailScreen(
+                                                      placeName:
+                                                          travelData[index]
+                                                              .name,
+                                                    );
+                                                  },
+                                                ),
+                                              );
+                                            },
                                             child: const Text(
                                               'Show',
                                               style: TextStyle(

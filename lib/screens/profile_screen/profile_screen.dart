@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travelist/data/profile_model.dart';
 import 'package:travelist/data/travel_model.dart';
+import 'package:travelist/screens/places_detail_screen/places_detail_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   ProfileScreen({Key? key}) : super(key: key);
@@ -248,7 +249,18 @@ class ProfileScreen extends StatelessWidget {
                                   ],
                                 ),
                                 ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) {
+                                          return PlacesDetailScreen(
+                                            placeName: travelData[index].name,
+                                          );
+                                        },
+                                      ),
+                                    );
+                                  },
                                   child: const Text(
                                     'Show',
                                     style: TextStyle(color: Colors.white),
