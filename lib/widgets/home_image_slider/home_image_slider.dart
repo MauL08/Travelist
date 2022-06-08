@@ -11,7 +11,7 @@ class HomeImageSlider extends StatefulWidget {
 }
 
 class _HomeImageSliderState extends State<HomeImageSlider> {
-  final List<dynamic> travelData = allTravelData;
+  final List<dynamic> travelData = indonesiaTravelData;
   int dotIndex = 0;
 
   @override

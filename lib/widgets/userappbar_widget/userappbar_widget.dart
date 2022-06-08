@@ -40,26 +40,14 @@ Widget userAppBarWidget() {
             )
           ],
         ),
-        Row(
-          children: [
-            Icon(
-              Icons.notifications,
-              color: Colors.grey.shade600,
-              size: 30,
-            ),
-            const SizedBox(
-              width: 8,
-            ),
-            ClipOval(
-              child: Image.asset(
-                profileData.profileImage,
-                height: 30,
-                width: 30,
-                fit: BoxFit.contain,
-              ),
-            ),
-          ],
-        )
+        ClipOval(
+          child: Image.asset(
+            profileData.profileImage,
+            height: 30,
+            width: 30,
+            fit: BoxFit.contain,
+          ),
+        ),
       ],
     ),
   );

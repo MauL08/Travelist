@@ -14,7 +14,7 @@ class PlacesDetailScreen extends StatefulWidget {
 }
 
 class _PlacesDetailScreenState extends State<PlacesDetailScreen> {
-  final List<dynamic> travelData = allTravelData;
+  final List<dynamic> travelData = indonesiaTravelData;
   List detailedPlace = [];
 
   int dotIndex = 0;
@@ -141,19 +141,12 @@ class _PlacesDetailScreenState extends State<PlacesDetailScreen> {
             Container(
               alignment: Alignment.centerLeft,
               margin: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
-              child: Container(
-                padding: const EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: Colors.blue.shade800,
-                ),
-                child: Text(
-                  '${detailedPlace[0].name} Gallery',
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
+              child: Text(
+                'More Images for ${detailedPlace[0].name}',
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue.shade900,
                 ),
               ),
             ),

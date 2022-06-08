@@ -10,12 +10,12 @@ class PopularPlacesSlider extends StatefulWidget {
 }
 
 class _PopularPlacesSliderState extends State<PopularPlacesSlider> {
-  final List<dynamic> travelData = allTravelData;
+  final List<dynamic> travelData = indonesiaTravelData;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 220,
+      height: 300,
       width: double.infinity,
       margin: const EdgeInsets.symmetric(horizontal: 10),
       child: ListView.builder(
@@ -26,8 +26,8 @@ class _PopularPlacesSliderState extends State<PopularPlacesSlider> {
         itemBuilder: (context, index) {
           return Container(
             alignment: Alignment.center,
-            width: 240,
-            margin: const EdgeInsets.symmetric(vertical: 18, horizontal: 10),
+            width: 300,
+            margin: const EdgeInsets.symmetric(horizontal: 10),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(12),
@@ -35,8 +35,8 @@ class _PopularPlacesSliderState extends State<PopularPlacesSlider> {
             child: Column(
               children: [
                 Container(
-                  height: 100,
-                  width: 240,
+                  height: 200,
+                  width: 280,
                   margin: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12),

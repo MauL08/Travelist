@@ -18,13 +18,6 @@ class TravelData {
   });
 }
 
-var allTravelData = [
-  indonesiaTravelData,
-  englandTravelData,
-  americaTravelData,
-  europeTravelData
-].expand((e) => e).toList();
-
 const indonesiaTravelData = [
   TravelData(
     name: 'Bali',
@@ -67,9 +60,3 @@ const indonesiaTravelData = [
     ],
   ),
 ];
-
-const englandTravelData = [];
-
-const americaTravelData = [];
-
-const europeTravelData = [];

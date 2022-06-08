@@ -7,7 +7,7 @@ class ProfileScreen extends StatelessWidget {
   ProfileScreen({Key? key}) : super(key: key);
 
   final ProfileData profileData = userProfileData;
-  final List<dynamic> travelTest = allTravelData;
+  final List<dynamic> travelTest = indonesiaTravelData;
 
   @override
   Widget build(BuildContext context) {

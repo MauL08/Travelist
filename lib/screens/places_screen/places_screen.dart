@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:travelist/data/travel_category_model.dart';
 import 'package:travelist/data/travel_model.dart';
 import 'package:travelist/screens/places_detail_screen/places_detail_screen.dart';
 import 'package:travelist/widgets/userappbar_widget/userappbar_widget.dart';
@@ -15,9 +14,7 @@ class PlacesScreen extends StatefulWidget {
 
 class _PlacesScreenState extends State<PlacesScreen> {
   final ProfileData profileData = userProfileData;
-  final List<dynamic> travelData = allTravelData;
-  final List<TravelCategory> travelCategoryData = categoryList;
-
+  final List<dynamic> travelData = indonesiaTravelData;
   List foundedPlace = [];
 
   TextEditingController searchText = TextEditingController(text: '');
@@ -81,64 +78,15 @@ class _PlacesScreenState extends State<PlacesScreen> {
                 ),
               ),
               Container(
-                margin:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 16),
-                height: 40,
-                width: double.infinity,
-                child: ListView.separated(
-                  physics: const BouncingScrollPhysics(),
-                  shrinkWrap: true,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: ((context, index) {
-                    return ElevatedButton(
-                      onPressed: () {
-                        // if (travelCategoryData[index].categoryName == 'All') {
-                        //   setState(() {
-                        //     categoryFilter = '';
-                        //   });
-                        // } else {
-                        //   setState(() {
-                        //     categoryFilter =
-                        //         travelCategoryData[index].categoryName;
-                        //   });
-                        // }
-                      },
-                      child: Container(
-                        padding: const EdgeInsets.all(12),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Text(
-                          travelCategoryData[index].categoryName,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        primary: const Color(0xFF177FE4),
-                      ),
-                    );
-                  }),
-                  separatorBuilder: (context, index) {
-                    return const VerticalDivider(
-                      width: 10,
-                      color: Colors.transparent,
-                    );
-                  },
-                  itemCount: travelCategoryData.length,
-                ),
-              ),
-              Container(
                 margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                 child: foundedPlace.isNotEmpty
                     ? Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Viewing ${categoryFilter == '' ? 'All' : categoryFilter} Places',
+                            searchText.text == ''
+                                ? 'Indonesia Places'
+                                : 'Result for ${searchText.text}',
                             style: const TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 16,
