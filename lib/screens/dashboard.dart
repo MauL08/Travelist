@@ -15,7 +15,7 @@ class _DashboardState extends State<Dashboard> {
   int _navIndex = 0;
   final List<Widget> _screens = [
     HomeScreen(),
-    PlacesScreen(),
+    const PlacesScreen(),
     ProfileScreen(),
   ];
 
@@ -25,7 +25,7 @@ class _DashboardState extends State<Dashboard> {
       body: _screens[_navIndex],
       bottomNavigationBar: CurvedNavigationBar(
         color: Colors.lightBlue.shade300,
-        buttonBackgroundColor: Color(0xFF177FE4),
+        buttonBackgroundColor: const Color(0xFF177FE4),
         backgroundColor: Colors.indigo.shade500,
         height: 60,
         index: _navIndex,

@@ -4,9 +4,10 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class PlacesDetailScreen extends StatefulWidget {
-  PlacesDetailScreen({Key? key, required this.placeName}) : super(key: key);
+  const PlacesDetailScreen({Key? key, required this.placeName})
+      : super(key: key);
 
-  String placeName;
+  final String placeName;
 
   @override
   State<PlacesDetailScreen> createState() => _PlacesDetailScreenState();
@@ -43,7 +44,7 @@ class _PlacesDetailScreenState extends State<PlacesDetailScreen> {
       appBar: AppBar(
         title: Text(
           widget.placeName,
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
       ),
@@ -131,7 +132,7 @@ class _PlacesDetailScreenState extends State<PlacesDetailScreen> {
               ],
             ),
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+              margin: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
               child: Text(
                 detailedPlace[0].about,
                 textAlign: TextAlign.justify,
@@ -139,9 +140,9 @@ class _PlacesDetailScreenState extends State<PlacesDetailScreen> {
             ),
             Container(
               alignment: Alignment.centerLeft,
-              margin: EdgeInsets.symmetric(horizontal: 18, vertical: 8),
+              margin: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
               child: Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
                   color: Colors.blue.shade800,
@@ -157,7 +158,7 @@ class _PlacesDetailScreenState extends State<PlacesDetailScreen> {
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(vertical: 18, horizontal: 10),
+              margin: const EdgeInsets.symmetric(vertical: 18, horizontal: 10),
               child: Stack(
                 alignment: Alignment.bottomCenter,
                 children: [

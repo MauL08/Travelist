@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:travelist/data/travel_model.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:travelist/screens/places_detail_screen/places_detail_screen.dart';
 
 class PopularPlacesSlider extends StatefulWidget {
-  PopularPlacesSlider({Key? key}) : super(key: key);
+  const PopularPlacesSlider({Key? key}) : super(key: key);
 
   @override
   State<PopularPlacesSlider> createState() => _PopularPlacesSliderState();

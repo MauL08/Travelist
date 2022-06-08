@@ -5,7 +5,7 @@ Widget userAppBarWidget() {
   final ProfileData profileData = userProfileData;
 
   return Container(
-    margin: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+    margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
     child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -29,7 +29,7 @@ Widget userAppBarWidget() {
                   size: 15,
                   color: Colors.blue.shade700,
                 ),
-                Text(
+                const Text(
                   'Jakarta, Indonesia',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -40,29 +40,25 @@ Widget userAppBarWidget() {
             )
           ],
         ),
-        Container(
-          child: Row(
-            children: [
-              Icon(
-                Icons.notifications,
-                color: Colors.grey.shade600,
-                size: 30,
+        Row(
+          children: [
+            Icon(
+              Icons.notifications,
+              color: Colors.grey.shade600,
+              size: 30,
+            ),
+            const SizedBox(
+              width: 8,
+            ),
+            ClipOval(
+              child: Image.asset(
+                profileData.profileImage,
+                height: 30,
+                width: 30,
+                fit: BoxFit.contain,
               ),
-              SizedBox(
-                width: 8,
-              ),
-              Container(
-                child: ClipOval(
-                  child: Image.asset(
-                    profileData.profileImage,
-                    height: 30,
-                    width: 30,
-                    fit: BoxFit.contain,
-                  ),
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         )
       ],
     ),

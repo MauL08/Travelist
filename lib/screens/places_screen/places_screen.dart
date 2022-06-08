@@ -7,7 +7,7 @@ import 'package:travelist/widgets/userappbar_widget/userappbar_widget.dart';
 import '../../data/profile_model.dart';
 
 class PlacesScreen extends StatefulWidget {
-  PlacesScreen({Key? key}) : super(key: key);
+  const PlacesScreen({Key? key}) : super(key: key);
 
   @override
   State<PlacesScreen> createState() => _PlacesScreenState();

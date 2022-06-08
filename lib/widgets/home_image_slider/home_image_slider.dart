@@ -4,7 +4,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class HomeImageSlider extends StatefulWidget {
-  HomeImageSlider({Key? key}) : super(key: key);
+  const HomeImageSlider({Key? key}) : super(key: key);
 
   @override
   State<HomeImageSlider> createState() => _HomeImageSliderState();

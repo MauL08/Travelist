@@ -80,7 +80,7 @@ class ProfileScreen extends StatelessWidget {
                         margin: const EdgeInsets.only(bottom: 12),
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
-                          color: Color(0xFF177FE4),
+                          color: const Color(0xFF177FE4),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Row(
@@ -108,7 +108,7 @@ class ProfileScreen extends StatelessWidget {
                         margin: const EdgeInsets.only(bottom: 12),
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
-                          color: Color(0xFF177FE4),
+                          color: const Color(0xFF177FE4),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Row(
@@ -135,7 +135,7 @@ class ProfileScreen extends StatelessWidget {
                         width: 220,
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
-                          color: Color(0xFF177FE4),
+                          color: const Color(0xFF177FE4),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: Row(

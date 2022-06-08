@@ -21,7 +21,7 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               userAppBarWidget(),
-              HomeImageSlider(),
+              const HomeImageSlider(),
               Container(
                 margin: const EdgeInsets.symmetric(vertical: 28),
                 height: 100,
@@ -90,7 +90,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              PopularPlacesSlider(),
+              const PopularPlacesSlider(),
             ],
           ),
         ),
