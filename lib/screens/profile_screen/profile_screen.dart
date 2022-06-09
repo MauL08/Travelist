@@ -76,7 +76,6 @@ class ProfileScreen extends StatelessWidget {
                   Column(
                     children: [
                       Container(
-                        width: 220,
                         margin: const EdgeInsets.only(bottom: 12),
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
@@ -87,7 +86,7 @@ class ProfileScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             const Text(
-                              'Name :',
+                              'Name : ',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
@@ -104,7 +103,6 @@ class ProfileScreen extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        width: 220,
                         margin: const EdgeInsets.only(bottom: 12),
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
@@ -115,7 +113,7 @@ class ProfileScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             const Text(
-                              'Birth Date :',
+                              'Birth Date : ',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
@@ -132,7 +130,6 @@ class ProfileScreen extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        width: 220,
                         padding: const EdgeInsets.all(12),
                         decoration: BoxDecoration(
                           color: const Color(0xFF177FE4),
@@ -142,7 +139,7 @@ class ProfileScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             const Text(
-                              'Age :',
+                              'Age : ',
                               style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
